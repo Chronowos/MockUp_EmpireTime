@@ -1,0 +1,34 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#deloitte_image img{
+    position: absolute;
+    width: 125px;
+    height: auto;
+    margin: 10px;
+}
+#top-bar {
+    background-color: black;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding: 0px;
+    justify-content: center;
+    display: flex;
+}
+#navigation li {
+    display: inline-block;
+    align-items: center;
+
+}
+#navigation a {
+    margin: 10px;
+    margin-left: 40px;
+    display: block;
+    color: white;
+}

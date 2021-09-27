@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Empire Time</title>
+        <link rel="shortcut icon" href="Time.ico">
+        <link rel="stylesheet" href="newstyle.css">
+</head>
+
+<body>
+        <div id="top-bar">
+                <div id="deloitte_image">
+                        <img src="deloitte_logo.png" alt="Logo von Deloitte">
+                </div>
+                <div id="navigation">
+                        <ul>
+                                <li><a href="https://www.google.de">Home</a></li>
+                                <li><a href="https://www.youtube.de">Time</a></li>
+                        </ul>
+                </div>
+        </div>
+        <div id="icon-list">
+
+                <div class="action_button">
+                        <img src="previous.png" />
+                        <p class="picture_caption">Previous</p>
+                </div>
+                <div class="action_button">
+                        <img src="next.png" />
+                        <p class="picture_caption">Next</p>
+                </div>
+                <div class="action_button">
+                        <img src="save.png" />
+                        <p class="picture_caption">Save</p>
+                </div>
+                <div class="action_button">
+                        <img src="plus.png" />
+                        <p class="picture_caption">Add Row</p>
+                </div>
+                <div class="action_button">
+                        <img src="approve.png" />
+                        <p class="picture_caption">Approve</p>
+                </div>
+                <div class="action_button">
+                        <img src="delete.png" />
+                        <p class="picture_caption">Delete</p>
+                </div>
+                <div class="action_button">
+                        <img src="print.png" />
+                        <p class="picture_caption">Print</p>
+                </div>
+                <div class="action_button">
+                        <img src="options.png" />
+                        <p class="picture_caption">Options</p>
+                </div>
+                <div class="action_button">
+                        <img src="views.png" />
+                        <p class="picture_caption">Views</p>
+                </div>
+                <div class="action_button">
+                        <img src="help.png" />
+                        <p class="picture_caption">Help</p>
+                </div>
+                <div class="action_button">
+                        <img src="import.png" />
+                        <p class="picture_caption">Import</p>
+                </div>
+                <div class="action_button">
+                        <img src="export.png" />
+                        <p class="picture_caption">Export</p>
+                </div>
+        </div>
+        <div id="calendar">
+                <img id="calendar_pic" src="calendar.png" style="display: none; height:300px;" />
+                <input id="open_calendar" type="button" value="Kalender" onclick="openCalendar()" style="width: 100px">
+        </div>
+        <div id="searchbar">
+                <input id="mySearchInput" type="text" placeholder="Suche..." onkeyup="searchFunction()"><br>
+        </div>
+        <div id="table">
+                <table id="data_table">
+                        <thead>
+                                <tr>
+                                        <th>Client</th>
+                                        <th>Engagement</th>
+                                        <th>Engagement Code</th>
+                                        <th>Task List</th>
+                                        <th>Task</th>
+                                        <th>Sat 7</th>
+                                        <th>Sun 8</th>
+                                        <th>Mon 9</th>
+                                        <th>Tue 10</th>
+                                        <th>Wed 11</th>
+                                        <th>Thu 12</th>
+                                        <th>Fri 13</th>
+                                        <th>Total</th>
+                                </tr>
+                        </thead>
+                        <tbody id="myTableBody">
+                                <tr id="row1">
+                                        <td>SCHULUNG990011</td>
+                                        <td>TAX ELEARNING, 990010593</td>
+                                        <td>
+                                                <div class="dropdown">
+                                                        <button onclick="myFunction()"
+                                                                class="dropbtn">990010593</button>
+                                                        <div id="myDropdown" class="dropdown-content">
+                                                                <p>SCHULUNG990011<br>AUDIT INDUSTRY ADVISORY</p>
+                                                                <p>SCHULUNG990011<br>TAX DATEV SCHULUNGEN</p>
+                                                                <p>SCHULUNG990011<br>FÜ TRAIN THE TRAINER</p>
+                                                        </div>
+                                                </div>
+                                        </td>
+                                        <td>Training (Attendees)</td>
+                                        <td>Training</td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNum" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNum',1)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNum" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNum',1)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNum" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNum',1)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNum" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNum',1)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNum" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNum',1)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNum" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNum',1)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNum" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNum',1)"></td>
+
+                                        <td>0</td>
+                                </tr>
+                                <tr id="row2">
+                                        <td>ABWESENHEIT990030</td>
+                                        <td>ABWESENHEIT, 99003007</td>
+                                        <td>99003007</td>
+                                        <td>Feiertag</td>
+                                        <td>Feiertag</td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow2" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow2',2)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow2" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow2',2)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow2" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow2',2)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow2" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow2',2)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow2" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow2',2)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow2" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow2',2)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow2" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow2',2)"></td>
+                                        <td>0</td>
+                                </tr>
+                                <tr id="row3">
+                                        <td>DISPOFREI99999</td>
+                                        <td>DISPOSITIONSFREI - T&L 999999004</td>
+                                        <td>999999004</td>
+                                        <td>Allg. Tätigkeiten</td>
+                                        <td>Facharbeit (intern)</td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow3" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow3',3)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow3" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow3',3)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow3" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow3',3)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow3" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow3',3)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow3" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow3',3)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow3" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow3',3)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow3" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow3',3)"></td>
+                                        <td>0</td>
+                                </tr>
+                                <tr id="row4">
+                                        <td>SCHULUNG</td>
+                                        <td>TAX ELEARNING</td>
+                                        <td>9900123123</td>
+                                        <td>Training</td>
+                                        <td>Training</td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow4" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow4',4)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow4" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow4',4)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow4" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow4',4)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow4" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow4',4)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow4" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow4',4)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow4" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow4',4)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow4" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow4',4)"></td>
+                                        <td>0</td>
+                                </tr>
+                                <tr id="row5">
+                                        <td>SCHULUNG</td>
+                                        <td>TAX ELEARNING</td>
+                                        <td>9900123123</td>
+                                        <td>Training</td>
+                                        <td>Training</td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow5" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow5',5)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow5" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow5',5)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow5" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow5',5)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow5" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow5',5)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow5" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow5',5)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow5" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow5',5)"></td>
+                                        <td><input type="number" max="12" min="0" step="any" class="DayNumRow5" size="5"
+                                                        value="0" onchange="getTotalOfRow('DayNumRow5',5)"></td>
+                                        <td>0</td>
+                                </tr>
+                        </tbody>
+
+                </table>
+        </div>
+        <script src="website_functions.js"></script>
+</body>
+
+</html>

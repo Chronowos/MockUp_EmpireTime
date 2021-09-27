@@ -1,0 +1,11 @@
+        <button class="action_button" id="save" type="button">Save</button> 
+        <button class="action_button" id="add_row" type="button">Add Row</button> 
+        <button class="action_button" id="approve" type="button">Approve</button> 
+        <button class="action_button" id="delete" type="button">Delete</button> 
+        <button class="action_button" id="print" type="button">Print</button> 
+        <button class="action_button" id="options" type="button">Options</button> 
+        <button class="action_button" id="views" type="button">Views</button> 
+        <button class="action_button" id="help" type="button">Help</button> 
+
+
+        <span class="picture_caption">Save</span>

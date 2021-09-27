@@ -1,0 +1,267 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.action_button{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+
+#icon-list img {
+    position: absolute;
+    width:50px;
+    height:auto;
+
+}
+
+.picture_caption {
+    display:inline-block;
+    position:absolute;
+    font-size: 15px;
+    padding-top: 70px;
+    padding-right:10px;
+    margin-top: 0px;
+    text-align: center;
+
+}
+
+.picture_caption:hover{
+    color: rgb(134, 188, 36);
+}
+
+#icon-list{
+    position: absolute;
+    align-items: center;
+}
+
+#deloitte_image img {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#top-bar {
+    position:relative;
+    background-color: black;
+    height: 55px;
+    min-width: 500px;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding: 0px;
+    justify-content: center;
+    display: flex;
+}
+
+#navigation li {
+    display: inline-block;
+    align-items: center;
+}
+
+#navigation a {
+    margin-top: -45px;
+    margin-left: 40px;
+    display: block;
+    color: white;
+}
+
+.action_button{
+    margin-top: 100px;
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    min-height: 10vh;
+    max-height: 20vh;
+    position: sticky;
+    cursor:pointer;
+}
+
+#table {
+    position: relative;
+    border-collapse: collapse;
+    margin: 210px 15px;
+    min-width: 400px;
+    font-size: 15px;
+}
+
+#table thead tr {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#table tbody tr {
+    background-color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
+    text-align:center;
+}
+
+#table thead th, #table tbody td {
+    padding: 5px 20px;
+}
+
+#table tbody tr td:last-child{
+    background-color: black;
+    color: white;
+}
+
+.DayNum {
+    width: auto;
+}
+
+.dropbtn {
+    background-color: rgb(134, 188, 36);
+    color: white;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(153, 197, 71);
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+#mySearchInput{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 1475px;
+    height: 25px;
+    width:400px;
+    float: right;
+    z-index: 1;
+    
+}
+
+#open_calendar:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(134, 188, 36);
+}
+
+#open_calendar{
+    background-color: rgb(134, 188, 36);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 300px;
+    height: 50px;
+    position:absolute;
+    float:right;
+    margin-top: 50px;
+    margin-left: 1500px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    transition-duration: 0.4s;
+    cursor:pointer;
+}
+
+#calendar_pic{
+    margin-left: 1600px;
+    position: absolute;
+    float:right;
+    margin-right: 50px;
+    z-index: 999;
+}
+
+.dropdown-content p:hover {background-color: #ddd}
+  
+.show {display:block;}
+
+@media only screen and (max-width:768px){
+    #top-bar {
+        position:relative;
+        background-color: black;
+        height: 55px;
+        width: 230vh;
+    }
+
+    #navigation ul {
+        list-style-type: none;
+        margin-bottom: 0px;
+        padding-left: 150px;
+        justify-content: left;
+        display: flex;
+    }
+
+    .action_button{
+        margin-top: 50px;
+        float: left;
+        margin-left: -15px;
+        margin-bottom: 60px;
+        min-height: 10px;
+        max-height: 20px;
+        position: sticky;
+        cursor:pointer;
+    }
+
+    #table {
+        position: relative;
+        border-collapse: collapse;
+        margin: 210px 15px;
+        margin-top: 610px;
+        min-width: 400px;
+        font-size: 15px;
+    }
+
+    #mySearchInput{
+        position: absolute;
+        margin-top: 520px;
+        margin-left: 20px;
+        height: 25px;
+        width: 300px;
+        float: right;
+        z-index: 1;
+        
+    }
+
+    #open_calendar{
+        background-color: rgb(134, 188, 36);
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        width: 300px;
+        height: 50px;
+        position:absolute;
+        float:right;
+        margin-top: 565px;
+        margin-left: 120px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        transition-duration: 0.4s;
+        cursor:pointer;
+    }
+}
